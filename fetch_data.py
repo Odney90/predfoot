@@ -2,56 +2,55 @@ import requests
 import pandas as pd
 import os
 
-# Clé API fournie
+# Votre clé API (remplacez-la par votre clé réelle)
 API_KEY = "79378a342b639a3063867f69ad5e78d5"
 
 def fetch_data_from_api():
-    # URL de l'API Football V3 pour récupérer les fixtures
+    # URL de l'endpoint pour récupérer les fixtures
     url = "https://v3.football.api-sports.io/fixtures"
     
-    # Configuration des headers avec la clé API
+    # En-têtes nécessaires pour l'API Football V3
     headers = {
         "x-apisports-key": API_KEY
     }
     
-    # Exemple de paramètres (à adapter en fonction des besoins : saison, ligue, etc.)
+    # Paramètres de requête (à adapter selon vos besoins, ici un exemple avec la Premier League et la saison 2022)
     params = {
-        "league": "39",    # Par exemple, Premier League (à adapter)
-        "season": "2022"     # Exemple d'année de saison
+        "league": "39",   # Exemple: Premier League
+        "season": "2022"
     }
     
     try:
         response = requests.get(url, headers=headers, params=params)
-        response.raise_for_status()  # Lève une exception en cas d'erreur HTTP
+        response.raise_for_status()  # Lève une exception en cas de problème HTTP
         data = response.json()
         
-        # Vérification de la présence de données dans la réponse
+        # Récupérer la liste des fixtures
         fixtures = data.get("response", [])
         if not fixtures:
-            print("Aucun fixture trouvé dans la réponse.")
+            print("Aucune donnée retournée par l'API.")
             return None
         
-        # Construction d'une DataFrame avec quelques variables d'exemple
-        # À compléter pour extraire toutes les 52 variables attendues
         rows = []
         for fixture in fixtures:
+            # Extraction de quelques données de base ; vous pouvez ajouter les autres variables selon vos besoins
             fixture_id = fixture.get("fixture", {}).get("id")
             home_team = fixture.get("teams", {}).get("home", {}).get("name")
             away_team = fixture.get("teams", {}).get("away", {}).get("name")
             score_home = fixture.get("goals", {}).get("home")
             score_away = fixture.get("goals", {}).get("away")
             
-            # Exemple de dictionnaire ; vous devez ajouter ici les autres variables
+            # Construire le dictionnaire d'une ligne (complétez avec les autres variables nécessaires)
             row = {
                 "fixture_id": fixture_id,
                 "home_team": home_team,
                 "away_team": away_team,
                 "score_home": score_home,
-                "score_away": score_away,
-                # ... ajoutez ici les 52 variables (26 par équipe)
+                "score_away": score_away
             }
             rows.append(row)
         
+        # Conversion de la liste en DataFrame pandas
         df = pd.DataFrame(rows)
         return df
 
@@ -60,14 +59,13 @@ def fetch_data_from_api():
         return None
 
 def saisie_manuelle():
-    # Exemple de saisie manuelle pour quelques variables (à étendre aux 52 variables)
+    # En cas d'échec de l'API, vous pouvez saisir manuellement quelques données exemples.
     data = {
         "fixture_id": [1],
         "home_team": ["Equipe A"],
         "away_team": ["Equipe B"],
         "score_home": [2],
-        "score_away": [1],
-        # ... ajouter les autres variables manuellement
+        "score_away": [1]
     }
     df = pd.DataFrame(data)
     return df
@@ -76,12 +74,12 @@ def main():
     # Tente de récupérer les données via l'API
     df = fetch_data_from_api()
     
-    # Si l'API ne renvoie rien ou en cas d'erreur, bascule sur la saisie manuelle
+    # Si la récupération échoue, on bascule sur la saisie manuelle
     if df is None or df.empty:
         print("Utilisation de la saisie manuelle...")
         df = saisie_manuelle()
     
-    # Création du dossier 'data' s'il n'existe pas
+    # Crée le dossier "data" s'il n'existe pas
     if not os.path.exists("data"):
         os.makedirs("data")
     

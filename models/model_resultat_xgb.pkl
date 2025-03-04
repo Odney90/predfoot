@@ -1,0 +1,5 @@
+import pickle
+
+# Exemple pour un modèle de classification (prédiction du résultat)
+with open("models/model_resultat.pkl", "wb") as f:
+    pickle.dump(model_resultat, f)

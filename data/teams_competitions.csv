@@ -1,1 +1,466 @@
-
+competition,team_id,team_name,country,founded,logo
+Premier League,33,Manchester United,England,1878.0,https://media.api-sports.io/football/teams/33.png
+Premier League,34,Newcastle,England,1892.0,https://media.api-sports.io/football/teams/34.png
+Premier League,35,Bournemouth,England,1899.0,https://media.api-sports.io/football/teams/35.png
+Premier League,36,Fulham,England,1879.0,https://media.api-sports.io/football/teams/36.png
+Premier League,39,Wolves,England,1877.0,https://media.api-sports.io/football/teams/39.png
+Premier League,40,Liverpool,England,1892.0,https://media.api-sports.io/football/teams/40.png
+Premier League,41,Southampton,England,1885.0,https://media.api-sports.io/football/teams/41.png
+Premier League,42,Arsenal,England,1886.0,https://media.api-sports.io/football/teams/42.png
+Premier League,45,Everton,England,1878.0,https://media.api-sports.io/football/teams/45.png
+Premier League,46,Leicester,England,1884.0,https://media.api-sports.io/football/teams/46.png
+Premier League,47,Tottenham,England,1882.0,https://media.api-sports.io/football/teams/47.png
+Premier League,48,West Ham,England,1895.0,https://media.api-sports.io/football/teams/48.png
+Premier League,49,Chelsea,England,1905.0,https://media.api-sports.io/football/teams/49.png
+Premier League,50,Manchester City,England,1880.0,https://media.api-sports.io/football/teams/50.png
+Premier League,51,Brighton,England,1901.0,https://media.api-sports.io/football/teams/51.png
+Premier League,52,Crystal Palace,England,1905.0,https://media.api-sports.io/football/teams/52.png
+Premier League,55,Brentford,England,1889.0,https://media.api-sports.io/football/teams/55.png
+Premier League,57,Ipswich,England,1878.0,https://media.api-sports.io/football/teams/57.png
+Premier League,65,Nottingham Forest,England,1865.0,https://media.api-sports.io/football/teams/65.png
+Premier League,66,Aston Villa,England,1874.0,https://media.api-sports.io/football/teams/66.png
+Championship,38,Watford,England,1881.0,https://media.api-sports.io/football/teams/38.png
+Championship,43,Cardiff,Wales,1889.0,https://media.api-sports.io/football/teams/43.png
+Championship,44,Burnley,England,1882.0,https://media.api-sports.io/football/teams/44.png
+Championship,56,Bristol City,England,1894.0,https://media.api-sports.io/football/teams/56.png
+Championship,58,Millwall,England,1885.0,https://media.api-sports.io/football/teams/58.png
+Championship,59,Preston,England,1863.0,https://media.api-sports.io/football/teams/59.png
+Championship,60,West Brom,England,1878.0,https://media.api-sports.io/football/teams/60.png
+Championship,62,Sheffield Utd,England,1889.0,https://media.api-sports.io/football/teams/62.png
+Championship,63,Leeds,England,1919.0,https://media.api-sports.io/football/teams/63.png
+Championship,64,Hull City,England,1904.0,https://media.api-sports.io/football/teams/64.png
+Championship,67,Blackburn,England,1875.0,https://media.api-sports.io/football/teams/67.png
+Championship,69,Derby,England,1884.0,https://media.api-sports.io/football/teams/69.png
+Championship,70,Middlesbrough,England,1876.0,https://media.api-sports.io/football/teams/70.png
+Championship,71,Norwich,England,1902.0,https://media.api-sports.io/football/teams/71.png
+Championship,72,QPR,England,1885.0,https://media.api-sports.io/football/teams/72.png
+Championship,74,Sheffield Wednesday,England,1867.0,https://media.api-sports.io/football/teams/74.png
+Championship,75,Stoke City,England,1868.0,https://media.api-sports.io/football/teams/75.png
+Championship,76,Swansea,Wales,1912.0,https://media.api-sports.io/football/teams/76.png
+Championship,746,Sunderland,England,1879.0,https://media.api-sports.io/football/teams/746.png
+Championship,1338,Oxford United,England,1893.0,https://media.api-sports.io/football/teams/1338.png
+Championship,1346,Coventry,England,1883.0,https://media.api-sports.io/football/teams/1346.png
+Championship,1355,Portsmouth,England,1898.0,https://media.api-sports.io/football/teams/1355.png
+Championship,1357,Plymouth,England,1886.0,https://media.api-sports.io/football/teams/1357.png
+Championship,1359,Luton,England,1885.0,https://media.api-sports.io/football/teams/1359.png
+LaLiga,529,Barcelona,Spain,1899.0,https://media.api-sports.io/football/teams/529.png
+LaLiga,530,Atletico Madrid,Spain,1903.0,https://media.api-sports.io/football/teams/530.png
+LaLiga,531,Athletic Club,Spain,1898.0,https://media.api-sports.io/football/teams/531.png
+LaLiga,532,Valencia,Spain,1919.0,https://media.api-sports.io/football/teams/532.png
+LaLiga,533,Villarreal,Spain,1923.0,https://media.api-sports.io/football/teams/533.png
+LaLiga,534,Las Palmas,Spain,1949.0,https://media.api-sports.io/football/teams/534.png
+LaLiga,536,Sevilla,Spain,1890.0,https://media.api-sports.io/football/teams/536.png
+LaLiga,537,Leganes,Spain,1928.0,https://media.api-sports.io/football/teams/537.png
+LaLiga,538,Celta Vigo,Spain,1923.0,https://media.api-sports.io/football/teams/538.png
+LaLiga,540,Espanyol,Spain,1900.0,https://media.api-sports.io/football/teams/540.png
+LaLiga,541,Real Madrid,Spain,1902.0,https://media.api-sports.io/football/teams/541.png
+LaLiga,542,Alaves,Spain,1921.0,https://media.api-sports.io/football/teams/542.png
+LaLiga,543,Real Betis,Spain,1907.0,https://media.api-sports.io/football/teams/543.png
+LaLiga,546,Getafe,Spain,1983.0,https://media.api-sports.io/football/teams/546.png
+LaLiga,547,Girona,Spain,1930.0,https://media.api-sports.io/football/teams/547.png
+LaLiga,548,Real Sociedad,Spain,1909.0,https://media.api-sports.io/football/teams/548.png
+LaLiga,720,Valladolid,Spain,1928.0,https://media.api-sports.io/football/teams/720.png
+LaLiga,727,Osasuna,Spain,1920.0,https://media.api-sports.io/football/teams/727.png
+LaLiga,728,Rayo Vallecano,Spain,1924.0,https://media.api-sports.io/football/teams/728.png
+LaLiga,798,Mallorca,Spain,1916.0,https://media.api-sports.io/football/teams/798.png
+Segunda Division,535,Malaga,Spain,1948.0,https://media.api-sports.io/football/teams/535.png
+Segunda Division,539,Levante,Spain,1909.0,https://media.api-sports.io/football/teams/539.png
+Segunda Division,544,Deportivo La Coruna,Spain,1906.0,https://media.api-sports.io/football/teams/544.png
+Segunda Division,545,Eibar,Spain,1940.0,https://media.api-sports.io/football/teams/545.png
+Segunda Division,713,Cordoba,Spain,1954.0,https://media.api-sports.io/football/teams/713.png
+Segunda Division,715,Granada CF,Spain,1931.0,https://media.api-sports.io/football/teams/715.png
+Segunda Division,718,Oviedo,Spain,1926.0,https://media.api-sports.io/football/teams/718.png
+Segunda Division,719,Tenerife,Spain,1922.0,https://media.api-sports.io/football/teams/719.png
+Segunda Division,722,Albacete,Spain,1940.0,https://media.api-sports.io/football/teams/722.png
+Segunda Division,723,Almeria,Spain,1989.0,https://media.api-sports.io/football/teams/723.png
+Segunda Division,724,Cadiz,Spain,1910.0,https://media.api-sports.io/football/teams/724.png
+Segunda Division,726,Huesca,Spain,1922.0,https://media.api-sports.io/football/teams/726.png
+Segunda Division,731,Sporting Gijon,Spain,1905.0,https://media.api-sports.io/football/teams/731.png
+Segunda Division,732,Zaragoza,Spain,1932.0,https://media.api-sports.io/football/teams/732.png
+Segunda Division,797,Elche,Spain,1923.0,https://media.api-sports.io/football/teams/797.png
+Segunda Division,799,Mirandes,Spain,1927.0,https://media.api-sports.io/football/teams/799.png
+Segunda Division,4665,Racing Santander,Spain,1913.0,https://media.api-sports.io/football/teams/4665.png
+Segunda Division,5254,Castellón,Spain,1922.0,https://media.api-sports.io/football/teams/5254.png
+Segunda Division,5262,FC Cartagena,Spain,1995.0,https://media.api-sports.io/football/teams/5262.png
+Segunda Division,9409,Racing Ferrol,Spain,1919.0,https://media.api-sports.io/football/teams/9409.png
+Segunda Division,9580,Burgos,Spain,1922.0,https://media.api-sports.io/football/teams/9580.png
+Segunda Division,9692,Eldense,Spain,1921.0,https://media.api-sports.io/football/teams/9692.png
+Bundesliga,157,Bayern München,Germany,1900.0,https://media.api-sports.io/football/teams/157.png
+Bundesliga,160,SC Freiburg,Germany,1904.0,https://media.api-sports.io/football/teams/160.png
+Bundesliga,161,VfL Wolfsburg,Germany,1945.0,https://media.api-sports.io/football/teams/161.png
+Bundesliga,162,Werder Bremen,Germany,1899.0,https://media.api-sports.io/football/teams/162.png
+Bundesliga,163,Borussia Mönchengladbach,Germany,1900.0,https://media.api-sports.io/football/teams/163.png
+Bundesliga,164,FSV Mainz 05,Germany,1905.0,https://media.api-sports.io/football/teams/164.png
+Bundesliga,165,Borussia Dortmund,Germany,1909.0,https://media.api-sports.io/football/teams/165.png
+Bundesliga,167,1899 Hoffenheim,Germany,1899.0,https://media.api-sports.io/football/teams/167.png
+Bundesliga,168,Bayer Leverkusen,Germany,1904.0,https://media.api-sports.io/football/teams/168.png
+Bundesliga,169,Eintracht Frankfurt,Germany,1899.0,https://media.api-sports.io/football/teams/169.png
+Bundesliga,170,FC Augsburg,Germany,1907.0,https://media.api-sports.io/football/teams/170.png
+Bundesliga,172,VfB Stuttgart,Germany,1893.0,https://media.api-sports.io/football/teams/172.png
+Bundesliga,173,RB Leipzig,Germany,2009.0,https://media.api-sports.io/football/teams/173.png
+Bundesliga,176,VfL Bochum,Germany,1848.0,https://media.api-sports.io/football/teams/176.png
+Bundesliga,180,1. FC Heidenheim,Germany,1946.0,https://media.api-sports.io/football/teams/180.png
+Bundesliga,182,Union Berlin,Germany,1966.0,https://media.api-sports.io/football/teams/182.png
+Bundesliga,186,FC St. Pauli,Germany,1910.0,https://media.api-sports.io/football/teams/186.png
+Bundesliga,191,Holstein Kiel,Germany,1900.0,https://media.api-sports.io/football/teams/191.png
+2. Bundesliga,158,Fortuna Düsseldorf,Germany,1895.0,https://media.api-sports.io/football/teams/158.png
+2. Bundesliga,159,Hertha BSC,Germany,1892.0,https://media.api-sports.io/football/teams/159.png
+2. Bundesliga,166,Hannover 96,Germany,1896.0,https://media.api-sports.io/football/teams/166.png
+2. Bundesliga,171,1. FC Nürnberg,Germany,1900.0,https://media.api-sports.io/football/teams/171.png
+2. Bundesliga,174,FC Schalke 04,Germany,1904.0,https://media.api-sports.io/football/teams/174.png
+2. Bundesliga,175,Hamburger SV,Germany,1887.0,https://media.api-sports.io/football/teams/175.png
+2. Bundesliga,177,SSV Jahn Regensburg,Germany,2000.0,https://media.api-sports.io/football/teams/177.png
+2. Bundesliga,178,SpVgg Greuther Fürth,Germany,1903.0,https://media.api-sports.io/football/teams/178.png
+2. Bundesliga,179,1. FC Magdeburg,Germany,1965.0,https://media.api-sports.io/football/teams/179.png
+2. Bundesliga,181,SV Darmstadt 98,Germany,1898.0,https://media.api-sports.io/football/teams/181.png
+2. Bundesliga,185,SC Paderborn 07,Germany,1907.0,https://media.api-sports.io/football/teams/185.png
+2. Bundesliga,192,1.FC Köln,Germany,1948.0,https://media.api-sports.io/football/teams/192.png
+2. Bundesliga,744,Eintracht Braunschweig,Germany,1895.0,https://media.api-sports.io/football/teams/744.png
+2. Bundesliga,745,1. FC Kaiserslautern,Germany,1900.0,https://media.api-sports.io/football/teams/745.png
+2. Bundesliga,785,Karlsruher SC,Germany,1898.0,https://media.api-sports.io/football/teams/785.png
+2. Bundesliga,1313,Preußen Münster,Germany,1906.0,https://media.api-sports.io/football/teams/1313.png
+2. Bundesliga,1652,SSV Ulm 1846,Germany,1846.0,https://media.api-sports.io/football/teams/1652.png
+2. Bundesliga,1660,SV Elversberg,Germany,1907.0,https://media.api-sports.io/football/teams/1660.png
+Serie A,487,Lazio,Italy,1900.0,https://media.api-sports.io/football/teams/487.png
+Serie A,489,AC Milan,Italy,1899.0,https://media.api-sports.io/football/teams/489.png
+Serie A,490,Cagliari,Italy,1920.0,https://media.api-sports.io/football/teams/490.png
+Serie A,492,Napoli,Italy,1904.0,https://media.api-sports.io/football/teams/492.png
+Serie A,494,Udinese,Italy,1896.0,https://media.api-sports.io/football/teams/494.png
+Serie A,495,Genoa,Italy,1893.0,https://media.api-sports.io/football/teams/495.png
+Serie A,496,Juventus,Italy,1897.0,https://media.api-sports.io/football/teams/496.png
+Serie A,497,AS Roma,Italy,1927.0,https://media.api-sports.io/football/teams/497.png
+Serie A,499,Atalanta,Italy,1907.0,https://media.api-sports.io/football/teams/499.png
+Serie A,500,Bologna,Italy,1909.0,https://media.api-sports.io/football/teams/500.png
+Serie A,502,Fiorentina,Italy,1926.0,https://media.api-sports.io/football/teams/502.png
+Serie A,503,Torino,Italy,1906.0,https://media.api-sports.io/football/teams/503.png
+Serie A,504,Verona,Italy,1903.0,https://media.api-sports.io/football/teams/504.png
+Serie A,505,Inter,Italy,1908.0,https://media.api-sports.io/football/teams/505.png
+Serie A,511,Empoli,Italy,1920.0,https://media.api-sports.io/football/teams/511.png
+Serie A,517,Venezia,Italy,1907.0,https://media.api-sports.io/football/teams/517.png
+Serie A,523,Parma,Italy,1913.0,https://media.api-sports.io/football/teams/523.png
+Serie A,867,Lecce,Italy,1908.0,https://media.api-sports.io/football/teams/867.png
+Serie A,895,Como,Italy,1907.0,https://media.api-sports.io/football/teams/895.png
+Serie A,1579,Monza,Italy,1912.0,https://media.api-sports.io/football/teams/1579.png
+Serie B,488,Sassuolo,Italy,1922.0,https://media.api-sports.io/football/teams/488.png
+Serie B,498,Sampdoria,Italy,1946.0,https://media.api-sports.io/football/teams/498.png
+Serie B,508,Bari,Italy,1908.0,https://media.api-sports.io/football/teams/508.png
+Serie B,509,Cesena,Italy,1940.0,https://media.api-sports.io/football/teams/509.png
+Serie B,510,Cittadella,Italy,1973.0,https://media.api-sports.io/football/teams/510.png
+Serie B,512,Frosinone,Italy,1928.0,https://media.api-sports.io/football/teams/512.png
+Serie B,514,Salernitana,Italy,2011.0,https://media.api-sports.io/football/teams/514.png
+Serie B,515,Spezia,Italy,1906.0,https://media.api-sports.io/football/teams/515.png
+Serie B,518,Brescia,Italy,1911.0,https://media.api-sports.io/football/teams/518.png
+Serie B,520,Cremonese,Italy,1903.0,https://media.api-sports.io/football/teams/520.png
+Serie B,522,Palermo,Italy,1900.0,https://media.api-sports.io/football/teams/522.png
+Serie B,801,Pisa,Italy,1909.0,https://media.api-sports.io/football/teams/801.png
+Serie B,863,Juve Stabia,Italy,1907.0,https://media.api-sports.io/football/teams/863.png
+Serie B,880,Reggiana,Italy,1919.0,https://media.api-sports.io/football/teams/880.png
+Serie B,899,Modena,Italy,1912.0,https://media.api-sports.io/football/teams/899.png
+Serie B,1578,Sudtirol,Italy,1974.0,https://media.api-sports.io/football/teams/1578.png
+Serie B,1581,Carrarese,Italy,,https://media.api-sports.io/football/teams/1581.png
+Serie B,1687,Catanzaro,Italy,1929.0,https://media.api-sports.io/football/teams/1687.png
+Serie B,1693,Mantova,Italy,1906.0,https://media.api-sports.io/football/teams/1693.png
+Serie B,10137,Cosenza,Italy,1914.0,https://media.api-sports.io/football/teams/10137.png
+Ligue 1,77,Angers,France,1919.0,https://media.api-sports.io/football/teams/77.png
+Ligue 1,79,Lille,France,1944.0,https://media.api-sports.io/football/teams/79.png
+Ligue 1,80,Lyon,France,1950.0,https://media.api-sports.io/football/teams/80.png
+Ligue 1,81,Marseille,France,1899.0,https://media.api-sports.io/football/teams/81.png
+Ligue 1,82,Montpellier,France,1974.0,https://media.api-sports.io/football/teams/82.png
+Ligue 1,83,Nantes,France,1943.0,https://media.api-sports.io/football/teams/83.png
+Ligue 1,84,Nice,France,1904.0,https://media.api-sports.io/football/teams/84.png
+Ligue 1,85,Paris Saint Germain,France,1970.0,https://media.api-sports.io/football/teams/85.png
+Ligue 1,91,Monaco,France,1919.0,https://media.api-sports.io/football/teams/91.png
+Ligue 1,93,Reims,France,1909.0,https://media.api-sports.io/football/teams/93.png
+Ligue 1,94,Rennes,France,1901.0,https://media.api-sports.io/football/teams/94.png
+Ligue 1,95,Strasbourg,France,1906.0,https://media.api-sports.io/football/teams/95.png
+Ligue 1,96,Toulouse,France,1937.0,https://media.api-sports.io/football/teams/96.png
+Ligue 1,106,Stade Brestois 29,France,1950.0,https://media.api-sports.io/football/teams/106.png
+Ligue 1,108,Auxerre,France,1905.0,https://media.api-sports.io/football/teams/108.png
+Ligue 1,111,LE Havre,France,1872.0,https://media.api-sports.io/football/teams/111.png
+Ligue 1,116,Lens,France,1906.0,https://media.api-sports.io/football/teams/116.png
+Ligue 1,1063,Saint Etienne,France,1920.0,https://media.api-sports.io/football/teams/1063.png
+Ligue 2,87,Amiens,France,1901.0,https://media.api-sports.io/football/teams/87.png
+Ligue 2,88,Caen,France,1897.0,https://media.api-sports.io/football/teams/88.png
+Ligue 2,90,Guingamp,France,1912.0,https://media.api-sports.io/football/teams/90.png
+Ligue 2,97,Lorient,France,1926.0,https://media.api-sports.io/football/teams/97.png
+Ligue 2,98,Ajaccio,France,1910.0,https://media.api-sports.io/football/teams/98.png
+Ligue 2,99,Clermont Foot,France,1990.0,https://media.api-sports.io/football/teams/99.png
+Ligue 2,101,Grenoble,France,1917.0,https://media.api-sports.io/football/teams/101.png
+Ligue 2,104,RED Star FC 93,France,1897.0,https://media.api-sports.io/football/teams/104.png
+Ligue 2,110,Estac Troyes,France,1986.0,https://media.api-sports.io/football/teams/110.png
+Ligue 2,112,Metz,France,1932.0,https://media.api-sports.io/football/teams/112.png
+Ligue 2,114,Paris FC,France,1969.0,https://media.api-sports.io/football/teams/114.png
+Ligue 2,433,Laval,France,1902.0,https://media.api-sports.io/football/teams/433.png
+Ligue 2,1297,PAU,France,1904.0,https://media.api-sports.io/football/teams/1297.png
+Ligue 2,1301,Rodez,France,1929.0,https://media.api-sports.io/football/teams/1301.png
+Ligue 2,1304,Dunkerque,France,,https://media.api-sports.io/football/teams/1304.png
+Ligue 2,1305,Bastia,France,1905.0,https://media.api-sports.io/football/teams/1305.png
+Ligue 2,3012,Annecy,France,1927.0,https://media.api-sports.io/football/teams/3012.png
+Ligue 2,3200,Martigues,France,1921.0,https://media.api-sports.io/football/teams/3200.png
+Primeira Liga,211,Benfica,Portugal,1904.0,https://media.api-sports.io/football/teams/211.png
+Primeira Liga,212,FC Porto,Portugal,1893.0,https://media.api-sports.io/football/teams/212.png
+Primeira Liga,215,Moreirense,Portugal,,https://media.api-sports.io/football/teams/215.png
+Primeira Liga,217,SC Braga,Portugal,1921.0,https://media.api-sports.io/football/teams/217.png
+Primeira Liga,222,Boavista,Portugal,1903.0,https://media.api-sports.io/football/teams/222.png
+Primeira Liga,224,Guimaraes,Portugal,1922.0,https://media.api-sports.io/football/teams/224.png
+Primeira Liga,225,Nacional,Portugal,1910.0,https://media.api-sports.io/football/teams/225.png
+Primeira Liga,226,Rio Ave,Portugal,1939.0,https://media.api-sports.io/football/teams/226.png
+Primeira Liga,227,Santa Clara,Portugal,1921.0,https://media.api-sports.io/football/teams/227.png
+Primeira Liga,228,Sporting CP,Portugal,1906.0,https://media.api-sports.io/football/teams/228.png
+Primeira Liga,230,Estoril,Portugal,1939.0,https://media.api-sports.io/football/teams/230.png
+Primeira Liga,231,Farense,Portugal,1910.0,https://media.api-sports.io/football/teams/231.png
+Primeira Liga,240,Arouca,Portugal,1951.0,https://media.api-sports.io/football/teams/240.png
+Primeira Liga,242,Famalicao,Portugal,1931.0,https://media.api-sports.io/football/teams/242.png
+Primeira Liga,762,GIL Vicente,Portugal,1924.0,https://media.api-sports.io/football/teams/762.png
+Primeira Liga,4716,Casa Pia,Portugal,1920.0,https://media.api-sports.io/football/teams/4716.png
+Primeira Liga,15130,Estrela,Portugal,2018.0,https://media.api-sports.io/football/teams/15130.png
+Primeira Liga,21595,AVS,Portugal,,https://media.api-sports.io/football/teams/21595.png
+Liga Portugal 2,213,Feirense,Portugal,1918.0,https://media.api-sports.io/football/teams/213.png
+Liga Portugal 2,214,Maritimo,Portugal,1910.0,https://media.api-sports.io/football/teams/214.png
+Liga Portugal 2,216,Portimonense,Portugal,1914.0,https://media.api-sports.io/football/teams/216.png
+Liga Portugal 2,218,Tondela,Portugal,,https://media.api-sports.io/football/teams/218.png
+Liga Portugal 2,223,Chaves,Portugal,1949.0,https://media.api-sports.io/football/teams/223.png
+Liga Portugal 2,229,Benfica B,Portugal,,https://media.api-sports.io/football/teams/229.png
+Liga Portugal 2,233,Oliveirense,Portugal,1922.0,https://media.api-sports.io/football/teams/233.png
+Liga Portugal 2,234,Pacos Ferreira,Portugal,1950.0,https://media.api-sports.io/football/teams/234.png
+Liga Portugal 2,235,Penafiel,Portugal,1951.0,https://media.api-sports.io/football/teams/235.png
+Liga Portugal 2,238,Academico Viseu,Portugal,1914.0,https://media.api-sports.io/football/teams/238.png
+Liga Portugal 2,243,FC Porto B,Portugal,,https://media.api-sports.io/football/teams/243.png
+Liga Portugal 2,244,Leixoes,Portugal,1907.0,https://media.api-sports.io/football/teams/244.png
+Liga Portugal 2,245,Mafra,Portugal,1965.0,https://media.api-sports.io/football/teams/245.png
+Liga Portugal 2,810,Vizela,Portugal,1939.0,https://media.api-sports.io/football/teams/810.png
+Liga Portugal 2,4662,União de Leiria,Portugal,1966.0,https://media.api-sports.io/football/teams/4662.png
+Liga Portugal 2,4724,Alverca,Portugal,,https://media.api-sports.io/football/teams/4724.png
+Liga Portugal 2,4744,Felgueiras 1932,Portugal,2006.0,https://media.api-sports.io/football/teams/4744.png
+Liga Portugal 2,4799,Torreense,Portugal,,https://media.api-sports.io/football/teams/4799.png
+Eredivisie,193,PEC Zwolle,Netherlands,1910.0,https://media.api-sports.io/football/teams/193.png
+Eredivisie,194,Ajax,Netherlands,1900.0,https://media.api-sports.io/football/teams/194.png
+Eredivisie,195,Willem II,Netherlands,1896.0,https://media.api-sports.io/football/teams/195.png
+Eredivisie,197,PSV Eindhoven,Netherlands,1913.0,https://media.api-sports.io/football/teams/197.png
+Eredivisie,201,AZ Alkmaar,Netherlands,1967.0,https://media.api-sports.io/football/teams/201.png
+Eredivisie,202,Groningen,Netherlands,1971.0,https://media.api-sports.io/football/teams/202.png
+Eredivisie,203,NAC Breda,Netherlands,1912.0,https://media.api-sports.io/football/teams/203.png
+Eredivisie,205,Fortuna Sittard,Netherlands,1968.0,https://media.api-sports.io/football/teams/205.png
+Eredivisie,206,Heracles,Netherlands,1903.0,https://media.api-sports.io/football/teams/206.png
+Eredivisie,207,Utrecht,Netherlands,1970.0,https://media.api-sports.io/football/teams/207.png
+Eredivisie,209,Feyenoord,Netherlands,1908.0,https://media.api-sports.io/football/teams/209.png
+Eredivisie,210,Heerenveen,Netherlands,1920.0,https://media.api-sports.io/football/teams/210.png
+Eredivisie,410,GO Ahead Eagles,Netherlands,1971.0,https://media.api-sports.io/football/teams/410.png
+Eredivisie,413,NEC Nijmegen,Netherlands,1900.0,https://media.api-sports.io/football/teams/413.png
+Eredivisie,415,Twente,Netherlands,1965.0,https://media.api-sports.io/football/teams/415.png
+Eredivisie,417,Waalwijk,Netherlands,1940.0,https://media.api-sports.io/football/teams/417.png
+Eredivisie,419,Almere City FC,Netherlands,1932.0,https://media.api-sports.io/football/teams/419.png
+Eredivisie,426,Sparta Rotterdam,Netherlands,1888.0,https://media.api-sports.io/football/teams/426.png
+Eerste Divisie,196,Excelsior,Netherlands,1902.0,https://media.api-sports.io/football/teams/196.png
+Eerste Divisie,198,ADO Den Haag,Netherlands,1905.0,https://media.api-sports.io/football/teams/198.png
+Eerste Divisie,199,De Graafschap,Netherlands,1954.0,https://media.api-sports.io/football/teams/199.png
+Eerste Divisie,200,Vitesse,Netherlands,1892.0,https://media.api-sports.io/football/teams/200.png
+Eerste Divisie,204,VVV Venlo,Netherlands,1954.0,https://media.api-sports.io/football/teams/204.png
+Eerste Divisie,208,Emmen,Netherlands,1985.0,https://media.api-sports.io/football/teams/208.png
+Eerste Divisie,409,Dordrecht,Netherlands,1990.0,https://media.api-sports.io/football/teams/409.png
+Eerste Divisie,411,Jong PSV,Netherlands,,https://media.api-sports.io/football/teams/411.png
+Eerste Divisie,412,MVV,Netherlands,1902.0,https://media.api-sports.io/football/teams/412.png
+Eerste Divisie,414,Roda,Netherlands,1962.0,https://media.api-sports.io/football/teams/414.png
+Eerste Divisie,416,FC Volendam,Netherlands,1920.0,https://media.api-sports.io/football/teams/416.png
+Eerste Divisie,418,Jong AZ,Netherlands,,https://media.api-sports.io/football/teams/418.png
+Eerste Divisie,420,Cambuur,Netherlands,1964.0,https://media.api-sports.io/football/teams/420.png
+Eerste Divisie,421,Den Bosch,Netherlands,1964.0,https://media.api-sports.io/football/teams/421.png
+Eerste Divisie,422,FC Eindhoven,Netherlands,1909.0,https://media.api-sports.io/football/teams/422.png
+Eerste Divisie,423,FC OSS,Netherlands,1928.0,https://media.api-sports.io/football/teams/423.png
+Eerste Divisie,424,Helmond Sport,Netherlands,1967.0,https://media.api-sports.io/football/teams/424.png
+Eerste Divisie,425,Jong Ajax,Netherlands,,https://media.api-sports.io/football/teams/425.png
+Eerste Divisie,427,Telstar,Netherlands,1912.0,https://media.api-sports.io/football/teams/427.png
+Eerste Divisie,428,Jong Utrecht,Netherlands,,https://media.api-sports.io/football/teams/428.png
+Belgian Pro League,3797,Altona Magic,Australia,1968.0,https://media.api-sports.io/football/teams/3797.png
+Belgian Pro League,3798,Avondale,Australia,1972.0,https://media.api-sports.io/football/teams/3798.png
+Belgian Pro League,3800,Dandenong City,Australia,2008.0,https://media.api-sports.io/football/teams/3800.png
+Belgian Pro League,3801,Dandenong Thunder,Australia,1970.0,https://media.api-sports.io/football/teams/3801.png
+Belgian Pro League,3802,Green Gully,Australia,1955.0,https://media.api-sports.io/football/teams/3802.png
+Belgian Pro League,3803,Heidelberg United,Australia,1958.0,https://media.api-sports.io/football/teams/3803.png
+Belgian Pro League,3804,Hume City,Australia,1979.0,https://media.api-sports.io/football/teams/3804.png
+Belgian Pro League,3807,Melbourne Knights,Australia,1953.0,https://media.api-sports.io/football/teams/3807.png
+Belgian Pro League,3808,Oakleigh Cannons,Australia,1972.0,https://media.api-sports.io/football/teams/3808.png
+Belgian Pro League,3810,Port Melbourne,Australia,1968.0,https://media.api-sports.io/football/teams/3810.png
+Belgian Pro League,3811,South Melbourne,Australia,1959.0,https://media.api-sports.io/football/teams/3811.png
+Belgian Pro League,9978,St. Albans Saints,Australia,,https://media.api-sports.io/football/teams/9978.png
+Belgian Pro League,16784,Manningham United Blues,Australia,,https://media.api-sports.io/football/teams/16784.png
+Belgian Pro League,16785,Moreland City,Australia,1990.0,https://media.api-sports.io/football/teams/16785.png
+Turkish Süper Lig,4683,Metropolitan Police,England,1919.0,https://media.api-sports.io/football/teams/4683.png
+Turkish Süper Lig,4696,Leatherhead,England,1907.0,https://media.api-sports.io/football/teams/4696.png
+Turkish Süper Lig,4705,Harrow Borough,England,1933.0,https://media.api-sports.io/football/teams/4705.png
+Turkish Süper Lig,7230,Guernsey,England,2011.0,https://media.api-sports.io/football/teams/7230.png
+Turkish Süper Lig,7251,South Park,England,1897.0,https://media.api-sports.io/football/teams/7251.png
+Turkish Süper Lig,7257,Uxbridge,England,,https://media.api-sports.io/football/teams/7257.png
+Turkish Süper Lig,7261,Westfield (Surrey),England,1953.0,https://media.api-sports.io/football/teams/7261.png
+Turkish Süper Lig,7613,Ashford Town (Middlesex),England,1965.0,https://media.api-sports.io/football/teams/7613.png
+Turkish Süper Lig,7659,Moneyfields,England,1987.0,https://media.api-sports.io/football/teams/7659.png
+Turkish Süper Lig,7719,Hartley Wintney,England,,https://media.api-sports.io/football/teams/7719.png
+Turkish Süper Lig,7720,Hayes & Yeading United,England,2007.0,https://media.api-sports.io/football/teams/7720.png
+Turkish Süper Lig,7725,Kingstonian,England,1885.0,https://media.api-sports.io/football/teams/7725.png
+Turkish Süper Lig,8685,Ascot United,England,,https://media.api-sports.io/football/teams/8685.png
+Turkish Süper Lig,8692,Badshot Lea,England,,https://media.api-sports.io/football/teams/8692.png
+Turkish Süper Lig,8707,Binfield,England,1892.0,https://media.api-sports.io/football/teams/8707.png
+Turkish Süper Lig,8783,Farnham Town,England,1912.0,https://media.api-sports.io/football/teams/8783.png
+Turkish Süper Lig,8811,Hanworth Villa,England,1976.0,https://media.api-sports.io/football/teams/8811.png
+Turkish Süper Lig,8831,Horndean,England,1887.0,https://media.api-sports.io/football/teams/8831.png
+Turkish Süper Lig,8906,Raynes Park Vale,England,1995.0,https://media.api-sports.io/football/teams/8906.png
+Turkish Süper Lig,8941,Southall,England,1871.0,https://media.api-sports.io/football/teams/8941.png
+Turkish Süper Lig,8962,Sutton Common Rovers,England,1978.0,https://media.api-sports.io/football/teams/8962.png
+Turkish Süper Lig,17078,Rayners Lane,England,,https://media.api-sports.io/football/teams/17078.png
+UEFA Champions League,40,Liverpool,England,1892.0,https://media.api-sports.io/football/teams/40.png
+UEFA Champions League,42,Arsenal,England,1886.0,https://media.api-sports.io/football/teams/42.png
+UEFA Champions League,50,Manchester City,England,1880.0,https://media.api-sports.io/football/teams/50.png
+UEFA Champions League,66,Aston Villa,England,1874.0,https://media.api-sports.io/football/teams/66.png
+UEFA Champions League,79,Lille,France,1944.0,https://media.api-sports.io/football/teams/79.png
+UEFA Champions League,85,Paris Saint Germain,France,1970.0,https://media.api-sports.io/football/teams/85.png
+UEFA Champions League,91,Monaco,France,1919.0,https://media.api-sports.io/football/teams/91.png
+UEFA Champions League,106,Stade Brestois 29,France,1950.0,https://media.api-sports.io/football/teams/106.png
+UEFA Champions League,157,Bayern München,Germany,1900.0,https://media.api-sports.io/football/teams/157.png
+UEFA Champions League,165,Borussia Dortmund,Germany,1909.0,https://media.api-sports.io/football/teams/165.png
+UEFA Champions League,168,Bayer Leverkusen,Germany,1904.0,https://media.api-sports.io/football/teams/168.png
+UEFA Champions League,172,VfB Stuttgart,Germany,1893.0,https://media.api-sports.io/football/teams/172.png
+UEFA Champions League,173,RB Leipzig,Germany,2009.0,https://media.api-sports.io/football/teams/173.png
+UEFA Champions League,197,PSV Eindhoven,Netherlands,1913.0,https://media.api-sports.io/football/teams/197.png
+UEFA Champions League,209,Feyenoord,Netherlands,1908.0,https://media.api-sports.io/football/teams/209.png
+UEFA Champions League,211,Benfica,Portugal,1904.0,https://media.api-sports.io/football/teams/211.png
+UEFA Champions League,228,Sporting CP,Portugal,1906.0,https://media.api-sports.io/football/teams/228.png
+UEFA Champions League,247,Celtic,Scotland,1888.0,https://media.api-sports.io/football/teams/247.png
+UEFA Champions League,257,Rangers,Scotland,1873.0,https://media.api-sports.io/football/teams/257.png
+UEFA Champions League,278,Vikingur Reykjavik,Iceland,1908.0,https://media.api-sports.io/football/teams/278.png
+UEFA Champions League,327,Bodo/Glimt,Norway,1916.0,https://media.api-sports.io/football/teams/327.png
+UEFA Champions League,336,Jagiellonia,Poland,1927.0,https://media.api-sports.io/football/teams/336.png
+UEFA Champions League,354,The New Saints,Wales,1959.0,https://media.api-sports.io/football/teams/354.png
+UEFA Champions League,375,Malmo FF,Sweden,1910.0,https://media.api-sports.io/football/teams/375.png
+UEFA Champions League,394,Dinamo Minsk,Belarus,1927.0,https://media.api-sports.io/football/teams/394.png
+UEFA Champions League,397,FC Midtjylland,Denmark,1999.0,https://media.api-sports.io/football/teams/397.png
+UEFA Champions League,415,Twente,Netherlands,1965.0,https://media.api-sports.io/football/teams/415.png
+UEFA Champions League,489,AC Milan,Italy,1899.0,https://media.api-sports.io/football/teams/489.png
+UEFA Champions League,496,Juventus,Italy,1897.0,https://media.api-sports.io/football/teams/496.png
+UEFA Champions League,499,Atalanta,Italy,1907.0,https://media.api-sports.io/football/teams/499.png
+UEFA Champions League,500,Bologna,Italy,1909.0,https://media.api-sports.io/football/teams/500.png
+UEFA Champions League,505,Inter,Italy,1908.0,https://media.api-sports.io/football/teams/505.png
+UEFA Champions League,529,Barcelona,Spain,1899.0,https://media.api-sports.io/football/teams/529.png
+UEFA Champions League,530,Atletico Madrid,Spain,1903.0,https://media.api-sports.io/football/teams/530.png
+UEFA Champions League,541,Real Madrid,Spain,1902.0,https://media.api-sports.io/football/teams/541.png
+UEFA Champions League,547,Girona,Spain,1930.0,https://media.api-sports.io/football/teams/547.png
+UEFA Champions League,550,Shakhtar Donetsk,Ukraine,1936.0,https://media.api-sports.io/football/teams/550.png
+UEFA Champions League,556,Qarabag,Azerbaijan,1950.0,https://media.api-sports.io/football/teams/556.png
+UEFA Champions League,559,FCSB,Romania,1947.0,https://media.api-sports.io/football/teams/559.png
+UEFA Champions League,560,Slavia Praha,Czech-Republic,1892.0,https://media.api-sports.io/football/teams/560.png
+UEFA Champions League,565,BSC Young Boys,Switzerland,1898.0,https://media.api-sports.io/football/teams/565.png
+UEFA Champions League,566,Ludogorets,Bulgaria,1945.0,https://media.api-sports.io/football/teams/566.png
+UEFA Champions League,569,Club Brugge KV,Belgium,1891.0,https://media.api-sports.io/football/teams/569.png
+UEFA Champions League,571,Red Bull Salzburg,Austria,1933.0,https://media.api-sports.io/football/teams/571.png
+UEFA Champions League,572,Dynamo Kyiv,Ukraine,1927.0,https://media.api-sports.io/football/teams/572.png
+UEFA Champions League,573,FK Partizan,Serbia,1945.0,https://media.api-sports.io/football/teams/573.png
+UEFA Champions League,598,FK Crvena Zvezda,Serbia,1945.0,https://media.api-sports.io/football/teams/598.png
+UEFA Champions League,604,Maccabi Tel Aviv,Israel,1906.0,https://media.api-sports.io/football/teams/604.png
+UEFA Champions League,606,FC Lugano,Switzerland,1908.0,https://media.api-sports.io/football/teams/606.png
+UEFA Champions League,611,Fenerbahce,Turkey,1907.0,https://media.api-sports.io/football/teams/611.png
+UEFA Champions League,619,PAOK,Greece,1926.0,https://media.api-sports.io/football/teams/619.png
+UEFA Champions League,620,Dinamo Zagreb,Croatia,1911.0,https://media.api-sports.io/football/teams/620.png
+UEFA Champions League,628,Sparta Praha,Czech-Republic,1893.0,https://media.api-sports.io/football/teams/628.png
+UEFA Champions League,637,Sturm Graz,Austria,1909.0,https://media.api-sports.io/football/teams/637.png
+UEFA Champions League,645,Galatasaray,Turkey,1905.0,https://media.api-sports.io/football/teams/645.png
+UEFA Champions League,649,HJK helsinki,Finland,1907.0,https://media.api-sports.io/football/teams/649.png
+UEFA Champions League,651,Ferencvarosi TC,Hungary,1899.0,https://media.api-sports.io/football/teams/651.png
+UEFA Champions League,652,Shamrock Rovers,Ireland,1899.0,https://media.api-sports.io/football/teams/652.png
+UEFA Champions League,656,Slovan Bratislava,Slovakia,1919.0,https://media.api-sports.io/football/teams/656.png
+UEFA Champions League,667,Lincoln Red Imps FC,Gibraltar,,https://media.api-sports.io/football/teams/667.png
+UEFA Champions League,684,FC Differdange 03,Luxembourg,2003.0,https://media.api-sports.io/football/teams/684.png
+UEFA Champions League,687,Flora Tallinn,Estonia,1990.0,https://media.api-sports.io/football/teams/687.png
+UEFA Champions League,692,Ordabasy,Kazakhstan,1998.0,https://media.api-sports.io/football/teams/692.png
+UEFA Champions League,701,KI Klaksvik,Faroe-Islands,1905.0,https://media.api-sports.io/football/teams/701.png
+UEFA Champions League,703,UE Santa Coloma,Andorra,1995.0,https://media.api-sports.io/football/teams/703.png
+UEFA Champions League,705,Dinamo Batumi,Georgia,1923.0,https://media.api-sports.io/football/teams/705.png
+UEFA Champions League,709,Pyunik Yerevan,Armenia,1992.0,https://media.api-sports.io/football/teams/709.png
+UEFA Champions League,1393,Union St. Gilloise,Belgium,1897.0,https://media.api-sports.io/football/teams/1393.png
+UEFA Champions League,2247,Apoel Nicosia,Cyprus,1926.0,https://media.api-sports.io/football/teams/2247.png
+UEFA Champions League,2271,Petrocub,Moldova,,https://media.api-sports.io/football/teams/2271.png
+UEFA Champions League,3327,Egnatia Rrogozhinë,Albania,1964.0,https://media.api-sports.io/football/teams/3327.png
+UEFA Champions League,3364,Borac Banja Luka,Bosnia,1926.0,https://media.api-sports.io/football/teams/3364.png
+UEFA Champions League,3745,Dečić,Montenegro,1926.0,https://media.api-sports.io/football/teams/3745.png
+UEFA Champions League,3874,Panevėžys,Lithuania,2015.0,https://media.api-sports.io/football/teams/3874.png
+UEFA Champions League,4160,Rīgas FS,Latvia,2005.0,https://media.api-sports.io/football/teams/4160.png
+UEFA Champions League,4346,Struga,Macedonia,2015.0,https://media.api-sports.io/football/teams/4346.png
+UEFA Champions League,4360,Celje,Slovenia,1919.0,https://media.api-sports.io/football/teams/4360.png
+UEFA Champions League,4626,Hamrun Spartans,Malta,1907.0,https://media.api-sports.io/football/teams/4626.png
+UEFA Champions League,5308,Virtus,San-Marino,,https://media.api-sports.io/football/teams/5308.png
+UEFA Champions League,5354,Larne,Northern-Ireland,1889.0,https://media.api-sports.io/football/teams/5354.png
+UEFA Champions League,12733,Ballkani,Kosovo,,https://media.api-sports.io/football/teams/12733.png
+UEFA Europa League,33,Manchester United,England,1878.0,https://media.api-sports.io/football/teams/33.png
+UEFA Europa League,47,Tottenham,England,1882.0,https://media.api-sports.io/football/teams/47.png
+UEFA Europa League,80,Lyon,France,1950.0,https://media.api-sports.io/football/teams/80.png
+UEFA Europa League,84,Nice,France,1904.0,https://media.api-sports.io/football/teams/84.png
+UEFA Europa League,167,1899 Hoffenheim,Germany,1899.0,https://media.api-sports.io/football/teams/167.png
+UEFA Europa League,169,Eintracht Frankfurt,Germany,1899.0,https://media.api-sports.io/football/teams/169.png
+UEFA Europa League,194,Ajax,Netherlands,1900.0,https://media.api-sports.io/football/teams/194.png
+UEFA Europa League,201,AZ Alkmaar,Netherlands,1967.0,https://media.api-sports.io/football/teams/201.png
+UEFA Europa League,212,FC Porto,Portugal,1893.0,https://media.api-sports.io/football/teams/212.png
+UEFA Europa League,217,SC Braga,Portugal,1921.0,https://media.api-sports.io/football/teams/217.png
+UEFA Europa League,250,Kilmarnock,Scotland,1869.0,https://media.api-sports.io/football/teams/250.png
+UEFA Europa League,254,Heart Of Midlothian,Scotland,1874.0,https://media.api-sports.io/football/teams/254.png
+UEFA Europa League,257,Rangers,Scotland,1873.0,https://media.api-sports.io/football/teams/257.png
+UEFA Europa League,327,Bodo/Glimt,Norway,1916.0,https://media.api-sports.io/football/teams/327.png
+UEFA Europa League,329,Molde,Norway,1911.0,https://media.api-sports.io/football/teams/329.png
+UEFA Europa League,336,Jagiellonia,Poland,1927.0,https://media.api-sports.io/football/teams/336.png
+UEFA Europa League,338,Wisla Krakow,Poland,1906.0,https://media.api-sports.io/football/teams/338.png
+UEFA Europa League,354,The New Saints,Wales,1959.0,https://media.api-sports.io/football/teams/354.png
+UEFA Europa League,372,IF Elfsborg,Sweden,1904.0,https://media.api-sports.io/football/teams/372.png
+UEFA Europa League,375,Malmo FF,Sweden,1910.0,https://media.api-sports.io/football/teams/375.png
+UEFA Europa League,394,Dinamo Minsk,Belarus,1927.0,https://media.api-sports.io/football/teams/394.png
+UEFA Europa League,397,FC Midtjylland,Denmark,1999.0,https://media.api-sports.io/football/teams/397.png
+UEFA Europa League,415,Twente,Netherlands,1965.0,https://media.api-sports.io/football/teams/415.png
+UEFA Europa League,487,Lazio,Italy,1900.0,https://media.api-sports.io/football/teams/487.png
+UEFA Europa League,497,AS Roma,Italy,1927.0,https://media.api-sports.io/football/teams/497.png
+UEFA Europa League,531,Athletic Club,Spain,1898.0,https://media.api-sports.io/football/teams/531.png
+UEFA Europa League,548,Real Sociedad,Spain,1909.0,https://media.api-sports.io/football/teams/548.png
+UEFA Europa League,549,Besiktas,Turkey,1903.0,https://media.api-sports.io/football/teams/549.png
+UEFA Europa League,552,Maribor,Slovenia,1960.0,https://media.api-sports.io/football/teams/552.png
+UEFA Europa League,553,Olympiakos Piraeus,Greece,1925.0,https://media.api-sports.io/football/teams/553.png
+UEFA Europa League,554,Anderlecht,Belgium,1908.0,https://media.api-sports.io/football/teams/554.png
+UEFA Europa League,556,Qarabag,Azerbaijan,1950.0,https://media.api-sports.io/football/teams/556.png
+UEFA Europa League,559,FCSB,Romania,1947.0,https://media.api-sports.io/football/teams/559.png
+UEFA Europa League,560,Slavia Praha,Czech-Republic,1892.0,https://media.api-sports.io/football/teams/560.png
+UEFA Europa League,561,HNK Rijeka,Croatia,1946.0,https://media.api-sports.io/football/teams/561.png
+UEFA Europa League,566,Ludogorets,Bulgaria,1945.0,https://media.api-sports.io/football/teams/566.png
+UEFA Europa League,567,Plzen,Czech-Republic,1911.0,https://media.api-sports.io/football/teams/567.png
+UEFA Europa League,568,Sheriff Tiraspol,Moldova,1997.0,https://media.api-sports.io/football/teams/568.png
+UEFA Europa League,572,Dynamo Kyiv,Ukraine,1927.0,https://media.api-sports.io/football/teams/572.png
+UEFA Europa League,573,FK Partizan,Serbia,1945.0,https://media.api-sports.io/football/teams/573.png
+UEFA Europa League,604,Maccabi Tel Aviv,Israel,1906.0,https://media.api-sports.io/football/teams/604.png
+UEFA Europa League,606,FC Lugano,Switzerland,1908.0,https://media.api-sports.io/football/teams/606.png
+UEFA Europa League,611,Fenerbahce,Turkey,1907.0,https://media.api-sports.io/football/teams/611.png
+UEFA Europa League,617,Panathinaikos,Greece,1908.0,https://media.api-sports.io/football/teams/617.png
+UEFA Europa League,619,PAOK,Greece,1926.0,https://media.api-sports.io/football/teams/619.png
+UEFA Europa League,634,Botev Plovdiv,Bulgaria,,https://media.api-sports.io/football/teams/634.png
+UEFA Europa League,645,Galatasaray,Turkey,1905.0,https://media.api-sports.io/football/teams/645.png
+UEFA Europa League,648,Zira,Azerbaijan,,https://media.api-sports.io/football/teams/648.png
+UEFA Europa League,651,Ferencvarosi TC,Hungary,1899.0,https://media.api-sports.io/football/teams/651.png
+UEFA Europa League,652,Shamrock Rovers,Ireland,1899.0,https://media.api-sports.io/football/teams/652.png
+UEFA Europa League,667,Lincoln Red Imps FC,Gibraltar,,https://media.api-sports.io/football/teams/667.png
+UEFA Europa League,701,KI Klaksvik,Faroe-Islands,1905.0,https://media.api-sports.io/football/teams/701.png
+UEFA Europa League,702,Vojvodina,Serbia,1914.0,https://media.api-sports.io/football/teams/702.png
+UEFA Europa League,703,UE Santa Coloma,Andorra,1995.0,https://media.api-sports.io/football/teams/703.png
+UEFA Europa League,741,Cercle Brugge,Belgium,1899.0,https://media.api-sports.io/football/teams/741.png
+UEFA Europa League,781,Rapid Vienna,Austria,1899.0,https://media.api-sports.io/football/teams/781.png
+UEFA Europa League,998,Trabzonspor,Turkey,1967.0,https://media.api-sports.io/football/teams/998.png
+UEFA Europa League,1026,Lask Linz,Austria,1908.0,https://media.api-sports.io/football/teams/1026.png
+UEFA Europa League,1393,Union St. Gilloise,Belgium,1897.0,https://media.api-sports.io/football/teams/1393.png
+UEFA Europa League,2073,Silkeborg,Denmark,1917.0,https://media.api-sports.io/football/teams/2073.png
+UEFA Europa League,2184,Servette FC,Switzerland,1890.0,https://media.api-sports.io/football/teams/2184.png
+UEFA Europa League,2247,Apoel Nicosia,Cyprus,1926.0,https://media.api-sports.io/football/teams/2247.png
+UEFA Europa League,2259,FK Tobol Kostanay,Kazakhstan,1967.0,https://media.api-sports.io/football/teams/2259.png
+UEFA Europa League,2271,Petrocub,Moldova,,https://media.api-sports.io/football/teams/2271.png
+UEFA Europa League,2390,Paks,Hungary,1952.0,https://media.api-sports.io/football/teams/2390.png
+UEFA Europa League,2646,TSC Backa Topola,Serbia,1913.0,https://media.api-sports.io/football/teams/2646.png
+UEFA Europa League,3364,Borac Banja Luka,Bosnia,1926.0,https://media.api-sports.io/football/teams/3364.png
+UEFA Europa League,3403,Pafos,Cyprus,2014.0,https://media.api-sports.io/football/teams/3403.png
+UEFA Europa League,3549,Ružomberok,Slovakia,1906.0,https://media.api-sports.io/football/teams/3549.png
+UEFA Europa League,3874,Panevėžys,Lithuania,2015.0,https://media.api-sports.io/football/teams/3874.png
+UEFA Europa League,4160,Rīgas FS,Latvia,2005.0,https://media.api-sports.io/football/teams/4160.png
+UEFA Europa League,4360,Celje,Slovenia,1919.0,https://media.api-sports.io/football/teams/4360.png
+UEFA Europa League,4495,Maccabi Petah Tikva,Israel,1912.0,https://media.api-sports.io/football/teams/4495.png
+UEFA Europa League,6489,Kryvbas KR,Ukraine,2001.0,https://media.api-sports.io/football/teams/6489.png
+UEFA Europa League,14395,Llapi,Kosovo,1932.0,https://media.api-sports.io/football/teams/14395.png
+UEFA Europa League,20034,Corvinul Hunedoara,Romania,1921.0,https://media.api-sports.io/football/teams/20034.png

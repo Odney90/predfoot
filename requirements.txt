@@ -13,7 +13,9 @@ python-docx
 altair
 plotly
 statsmodels
-setuptools>=67.0.0
+setuptools==67.0.0
+
+
 
 
 

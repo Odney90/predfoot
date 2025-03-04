@@ -2,90 +2,94 @@ import requests
 import pandas as pd
 import os
 
-# Votre clé API (remplacez-la par votre clé réelle)
+# Votre clé API
 API_KEY = "79378a342b639a3063867f69ad5e78d5"
 
-def fetch_data_from_api():
-    # URL de l'endpoint pour récupérer les fixtures
-    url = "https://v3.football.api-sports.io/fixtures"
-    
-    # En-têtes nécessaires pour l'API Football V3
+# Dictionnaire des compétitions avec leurs IDs dans l’API Football
+# Les IDs ci-dessous sont ceux généralement utilisés par l'API Football,
+# mais vérifiez la documentation si nécessaire.
+competitions = {
+    # 7 meilleures ligues et leurs seconds niveaux (League 2)
+    "Premier League": 39,
+    "Championship": 40,             # 2ème division de la Premier League
+    "LaLiga": 140,
+    "Segunda Division": 141,         # 2ème division de LaLiga
+    "Bundesliga": 78,
+    "2. Bundesliga": 79,             # 2ème division de la Bundesliga
+    "Serie A": 135,
+    "Serie B": 136,                  # 2ème division de la Serie A
+    "Ligue 1": 61,
+    "Ligue 2": 62,                   # 2ème division de la Ligue 1
+    "Primeira Liga": 94,
+    "Liga Portugal 2": 95,           # 2ème division de la Primeira Liga
+    "Eredivisie": 88,
+    "Eerste Divisie": 89,            # 2ème division de l'Eredivisie
+
+    # Autres compétitions
+    "Belgian Pro League": 195,
+    "Turkish Süper Lig": 53,
+    "UEFA Champions League": 2,
+    "UEFA Europa League": 3
+}
+
+def fetch_teams_for_competition(comp_name, comp_id, season="2024"):
+    """
+    Récupère les équipes pour une compétition donnée et une saison.
+    Le paramètre 'season' est ici fixé à "2024" pour représenter la saison 2024-2025.
+    """
+    url = "https://v3.football.api-sports.io/teams"
     headers = {
         "x-apisports-key": API_KEY
     }
-    
-    # Paramètres de requête (à adapter selon vos besoins, ici un exemple avec la Premier League et la saison 2022)
     params = {
-        "league": "39",   # Exemple: Premier League
-        "season": "2022"
+        "league": comp_id,
+        "season": season
     }
     
     try:
         response = requests.get(url, headers=headers, params=params)
-        response.raise_for_status()  # Lève une exception en cas de problème HTTP
+        response.raise_for_status()
         data = response.json()
         
-        # Récupérer la liste des fixtures
-        fixtures = data.get("response", [])
-        if not fixtures:
-            print("Aucune donnée retournée par l'API.")
-            return None
-        
-        rows = []
-        for fixture in fixtures:
-            # Extraction de quelques données de base ; vous pouvez ajouter les autres variables selon vos besoins
-            fixture_id = fixture.get("fixture", {}).get("id")
-            home_team = fixture.get("teams", {}).get("home", {}).get("name")
-            away_team = fixture.get("teams", {}).get("away", {}).get("name")
-            score_home = fixture.get("goals", {}).get("home")
-            score_away = fixture.get("goals", {}).get("away")
+        teams = data.get("response", [])
+        team_list = []
+        for item in teams:
+            team = item.get("team", {})
+            team_id = team.get("id")
+            team_name = team.get("name")
+            country = team.get("country")
+            founded = team.get("founded")
+            logo = team.get("logo")
             
-            # Construire le dictionnaire d'une ligne (complétez avec les autres variables nécessaires)
-            row = {
-                "fixture_id": fixture_id,
-                "home_team": home_team,
-                "away_team": away_team,
-                "score_home": score_home,
-                "score_away": score_away
-            }
-            rows.append(row)
-        
-        # Conversion de la liste en DataFrame pandas
-        df = pd.DataFrame(rows)
-        return df
-
+            team_list.append({
+                "competition": comp_name,
+                "team_id": team_id,
+                "team_name": team_name,
+                "country": country,
+                "founded": founded,
+                "logo": logo
+            })
+        return team_list
     except Exception as e:
-        print("Erreur lors de la récupération des données via l'API :", e)
-        return None
-
-def saisie_manuelle():
-    # En cas d'échec de l'API, vous pouvez saisir manuellement quelques données exemples.
-    data = {
-        "fixture_id": [1],
-        "home_team": ["Equipe A"],
-        "away_team": ["Equipe B"],
-        "score_home": [2],
-        "score_away": [1]
-    }
-    df = pd.DataFrame(data)
-    return df
+        print(f"Erreur lors de la récupération des équipes pour {comp_name} : {e}")
+        return []
 
 def main():
-    # Tente de récupérer les données via l'API
-    df = fetch_data_from_api()
+    all_teams = []
+    for comp_name, comp_id in competitions.items():
+        print(f"Récupération des équipes pour {comp_name}...")
+        teams = fetch_teams_for_competition(comp_name, comp_id, season="2024")
+        all_teams.extend(teams)
     
-    # Si la récupération échoue, on bascule sur la saisie manuelle
-    if df is None or df.empty:
-        print("Utilisation de la saisie manuelle...")
-        df = saisie_manuelle()
-    
-    # Crée le dossier "data" s'il n'existe pas
-    if not os.path.exists("data"):
-        os.makedirs("data")
-    
-    # Sauvegarde des données dans data/matchs.csv
-    df.to_csv("data/matchs.csv", index=False)
-    print("Données sauvegardées dans data/matchs.csv")
+    if all_teams:
+        df = pd.DataFrame(all_teams)
+        # Créer le dossier "data" s'il n'existe pas
+        if not os.path.exists("data"):
+            os.makedirs("data")
+        df.to_csv("data/teams_competitions.csv", index=False)
+        print("Les données des équipes ont été sauvegardées dans data/teams_competitions.csv")
+    else:
+        print("Aucune donnée récupérée.")
 
 if __name__ == "__main__":
     main()

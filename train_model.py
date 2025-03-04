@@ -10,84 +10,97 @@ from sklearn.ensemble import RandomForestClassifier
 import xgboost as xgb
 from sklearn.metrics import accuracy_score
 
-# Chemin vers vos données (assurez-vous que le CSV existe et est complet)
-DATA_PATH = "data/matchs.csv"
-
-def load_and_preprocess_data():
-    # Charger le fichier CSV
-    df = pd.read_csv(DATA_PATH)
+def load_and_preprocess_data(csv_path):
+    """
+    Charge le jeu de données combiné construit à partir de l'API Football et effectue le prétraitement.
+    On suppose que le fichier contient une colonne 'resultat' pour la cible.
     
-    # Vérifiez que la colonne cible "resultat" existe
+    Les colonnes non numériques (comme 'fixture_id', 'date', 'Équipe', 'Ligue') sont supprimées.
+    Les variables numériques restantes sont utilisées comme features.
+    """
+    df = pd.read_csv(csv_path)
+    
+    # Vérifier que la colonne cible existe
     if "resultat" not in df.columns:
-        raise ValueError("La colonne 'resultat' n'est pas présente dans vos données.")
+        raise ValueError("La colonne 'resultat' n'est pas présente dans le jeu de données.")
     
-    # Séparer les features et la cible
-    X = df.drop(columns=["resultat"])
-    y = df["resultat"]
+    # On garde uniquement les colonnes numériques pour l'entraînement
+    # Supposons que les colonnes d'identifiants ou contextuelles sont : "fixture_id", "date", "Équipe", "Ligue"
+    cols_to_drop = ["fixture_id", "date", "Équipe", "Ligue"]
+    features = df.drop(columns=cols_to_drop + ["resultat"], errors='ignore')
+    target = df["resultat"]
     
-    # Optionnel : remplir ou supprimer les valeurs manquantes si nécessaire
-    # Exemple : X.fillna(X.mean(), inplace=True)
+    # Si certaines colonnes ne sont pas numériques, on tente de les convertir ou on les supprime
+    features = features.select_dtypes(include=[np.number])
     
-    # Normalisation des features
     scaler = StandardScaler()
-    X_scaled = scaler.fit_transform(X)
+    X_scaled = scaler.fit_transform(features)
     
-    return X_scaled, y, scaler
+    return X_scaled, target, scaler
 
-def train_models(X, y):
-    models = {}
+def train_all_models(X, y):
+    """
+    Entraîne plusieurs modèles de classification sur le jeu de données X et y.
+    Utilise la validation croisée à 5 plis pour évaluer les performances.
+    Retourne un dictionnaire de modèles entraînés et leurs scores.
+    """
+    models = {
+        "logistic_regression": LogisticRegression(max_iter=1000, random_state=42),
+        "svm": SVC(probability=True, random_state=42),
+        "random_forest": RandomForestClassifier(n_estimators=100, random_state=42),
+        "xgboost": xgb.XGBClassifier(use_label_encoder=False, eval_metric="mlogloss", random_state=42)
+    }
     
-    # Définir les modèles à entraîner
-    models["LogisticRegression"] = LogisticRegression(max_iter=1000)
-    models["SVM"] = SVC(probability=True)
-    models["RandomForest"] = RandomForestClassifier(n_estimators=100, random_state=42)
-    models["XGBoost"] = xgb.XGBClassifier(use_label_encoder=False, eval_metric="mlogloss", random_state=42)
-    
+    trained_models = {}
     cv_scores = {}
-    # Validation croisée et entraînement sur le jeu d'entraînement
+    
     for name, model in models.items():
         scores = cross_val_score(model, X, y, cv=5, scoring="accuracy")
         cv_scores[name] = np.mean(scores)
-        print(f"{name} - CV Accuracy: {cv_scores[name]:.4f}")
+        print(f"{name}: CV Accuracy = {cv_scores[name]:.4f}")
         model.fit(X, y)
-        models[name] = model  # Entraîné sur l'ensemble complet
-    
-    return models, cv_scores
+        trained_models[name] = model
+        
+    return trained_models, cv_scores
 
-def save_models(models, scaler):
-    # Créer le dossier "models" s'il n'existe pas
-    if not os.path.exists("models"):
-        os.makedirs("models")
+def save_models(models, scaler, models_dir="models"):
+    """
+    Sauvegarde les modèles entraînés et le scaler dans le dossier spécifié.
+    """
+    if not os.path.exists(models_dir):
+        os.makedirs(models_dir)
     
     for name, model in models.items():
-        filename = f"models/model_{name.lower()}.pkl"
+        filename = os.path.join(models_dir, f"{name}.pkl")
         with open(filename, "wb") as f:
             pickle.dump(model, f)
-        print(f"{name} sauvegardé dans {filename}")
+        print(f"Modèle '{name}' sauvegardé dans {filename}")
     
-    # Sauvegarder le scaler utilisé pour normaliser les données
-    with open("models/scaler.pkl", "wb") as f:
+    scaler_filename = os.path.join(models_dir, "scaler.pkl")
+    with open(scaler_filename, "wb") as f:
         pickle.dump(scaler, f)
-    print("Scaler sauvegardé dans models/scaler.pkl")
+    print(f"Scaler sauvegardé dans {scaler_filename}")
 
 def main():
+    # Chemin vers le dataset combiné (adapté à votre projet)
+    data_path = "data/combined_dataset_all_leagues_reduit.csv"
     print("Chargement et prétraitement des données...")
-    X, y, scaler = load_and_preprocess_data()
+    X, y, scaler = load_and_preprocess_data(data_path)
     
-    # Vous pouvez aussi diviser vos données pour une évaluation plus fine si besoin
+    # Division en jeu d'entraînement et de test pour évaluation
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
     print("Entraînement des modèles...")
-    models, cv_scores = train_models(X_train, y_train)
+    trained_models, cv_scores = train_all_models(X_train, y_train)
     
-    # Évaluation sur le jeu de test
-    for name, model in models.items():
+    print("\nÉvaluation sur le jeu de test:")
+    for name, model in trained_models.items():
         y_pred = model.predict(X_test)
         test_acc = accuracy_score(y_test, y_pred)
-        print(f"{name} - Test Accuracy: {test_acc:.4f}")
+        print(f"{name}: Test Accuracy = {test_acc:.4f}")
     
     print("Sauvegarde des modèles et du scaler...")
-    save_models(models, scaler)
+    save_models(trained_models, scaler)
     
     print("Entraînement terminé.")
 

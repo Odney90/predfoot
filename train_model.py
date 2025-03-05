@@ -10,6 +10,8 @@ from sklearn.ensemble import RandomForestClassifier
 import xgboost as xgb
 from sklearn.metrics import accuracy_score
 
+print("Début du script d'entraînement")
+
 def load_and_preprocess_data(csv_path):
     """
     Charge le dataset combiné réduit (contenant 44 variables numériques par match, 

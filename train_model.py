@@ -12,36 +12,33 @@ from sklearn.metrics import accuracy_score
 
 def load_and_preprocess_data(csv_path):
     """
-    Charge le jeu de données combiné construit à partir de l'API Football et effectue le prétraitement.
-    On suppose que le fichier contient une colonne 'resultat' pour la cible.
+    Charge le dataset combiné réduit (contenant 44 variables numériques par match, 
+    soit 22 par équipe) et effectue le prétraitement.
     
-    Les colonnes non numériques (comme 'fixture_id', 'date', 'Équipe', 'Ligue') sont supprimées.
-    Les variables numériques restantes sont utilisées comme features.
+    On suppose que le dataset contient une colonne 'resultat' pour la cible.
+    Les autres colonnes (les 44 variables) sont utilisées comme features.
     """
     df = pd.read_csv(csv_path)
     
-    # Vérifier que la colonne cible existe
     if "resultat" not in df.columns:
-        raise ValueError("La colonne 'resultat' n'est pas présente dans le jeu de données.")
+        raise ValueError("La colonne 'resultat' n'est pas présente dans le dataset.")
     
-    # On garde uniquement les colonnes numériques pour l'entraînement
-    # Supposons que les colonnes d'identifiants ou contextuelles sont : "fixture_id", "date", "Équipe", "Ligue"
-    cols_to_drop = ["fixture_id", "date", "Équipe", "Ligue"]
-    features = df.drop(columns=cols_to_drop + ["resultat"], errors='ignore')
-    target = df["resultat"]
+    # On suppose que le dataset contient exactement 44 variables pour les features (sans 'resultat')
+    X = df.drop(columns=["resultat"], errors='ignore')
+    y = df["resultat"]
     
-    # Si certaines colonnes ne sont pas numériques, on tente de les convertir ou on les supprime
-    features = features.select_dtypes(include=[np.number])
+    # Sélectionner uniquement les colonnes numériques
+    X = X.select_dtypes(include=[np.number])
     
     scaler = StandardScaler()
-    X_scaled = scaler.fit_transform(features)
+    X_scaled = scaler.fit_transform(X)
     
-    return X_scaled, target, scaler
+    return X_scaled, y, scaler
 
 def train_all_models(X, y):
     """
     Entraîne plusieurs modèles de classification sur le jeu de données X et y.
-    Utilise la validation croisée à 5 plis pour évaluer les performances.
+    Utilise une validation croisée à 5 plis pour évaluer les performances.
     Retourne un dictionnaire de modèles entraînés et leurs scores.
     """
     models = {
@@ -71,23 +68,21 @@ def save_models(models, scaler, models_dir="models"):
         os.makedirs(models_dir)
     
     for name, model in models.items():
-        filename = os.path.join(models_dir, f"{name}.pkl")
+        filename = f"{models_dir}/{name}.pkl"
         with open(filename, "wb") as f:
             pickle.dump(model, f)
         print(f"Modèle '{name}' sauvegardé dans {filename}")
     
-    scaler_filename = os.path.join(models_dir, "scaler.pkl")
+    scaler_filename = f"{models_dir}/scaler.pkl"
     with open(scaler_filename, "wb") as f:
         pickle.dump(scaler, f)
     print(f"Scaler sauvegardé dans {scaler_filename}")
 
 def main():
-    # Chemin vers le dataset combiné (adapté à votre projet)
-    data_path = "data/combined_dataset_all_leagues_reduit.csv"
+    data_path = "data/combined_dataset_all_leagues_reduit.csv"  # Chemin vers votre dataset combiné réduit
     print("Chargement et prétraitement des données...")
     X, y, scaler = load_and_preprocess_data(data_path)
     
-    # Division en jeu d'entraînement et de test pour évaluation
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
     print("Entraînement des modèles...")

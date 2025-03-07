@@ -1,4 +1,5 @@
 Variable,Description
+# Variables pour l'équipe 1 (domicile)
 Classement_1,Classement de l'équipe à domicile dans le championnat
 Points_1,Nombre de points accumulés par l'équipe à domicile
 Victoires_1,Nombre de victoires de l'équipe à domicile
@@ -21,6 +22,8 @@ RedCards_1,Nombre de cartons rouges reçus par l'équipe à domicile
 GoalkeeperSaves_1,Nombre d'arrêts effectués par le gardien de l'équipe à domicile
 TotalPasses_1,Nombre total de passes effectuées par l'équipe à domicile
 PassAccuracy_1,Pourcentage de passes précises pour l'équipe à domicile
+
+# Variables pour l'équipe 2 (extérieur)
 Classement_2,Classement de l'équipe à l'extérieur dans le championnat
 Points_2,Nombre de points accumulés par l'équipe à l'extérieur
 Victoires_2,Nombre de victoires de l'équipe à l'extérieur

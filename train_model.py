@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import pandas as pd
 import numpy as np
 import pickle
@@ -10,38 +11,34 @@ from sklearn.ensemble import RandomForestClassifier
 import xgboost as xgb
 from sklearn.metrics import accuracy_score
 
-def create_resultat_column(df):
+def create_resultat_column_from_group(df):
     """
-    Crée la colonne 'resultat' dans le DataFrame en se basant sur
-    les buts marqués par l'équipe à domicile et l'équipe à l'extérieur.
-    Pour chaque ligne :
-      - Si la colonne 'Équipe' correspond à 'home_team', alors :
-           1 si ButsMarques_1 > ButsMarques_2 (victoire),
-           0 si égaux (match nul),
-           2 si ButsMarques_1 < ButsMarques_2 (défaite).
-      - Si 'Équipe' correspond à 'away_team', alors :
-           1 si ButsMarques_2 > ButsMarques_1 (victoire),
-           0 si égaux,
-           2 si ButsMarques_2 < ButsMarques_1 (défaite).
+    Pour chaque match (identifié par fixture_id), compare les scores de chaque équipe et crée
+    la colonne 'resultat' pour chaque ligne.
+    On suppose que chaque match a deux lignes.
+      - Pour l'équipe à domicile (assumée avoir score dans 'ButsMarques_1'): 1 = victoire, 0 = nul, 2 = défaite.
+      - Pour l'équipe à l'extérieur (score dans 'ButsMarques_2'): 1 = victoire, 0 = nul, 2 = défaite.
     """
-    def determine_result(row):
-        if row['Équipe'] == row['home_team']:
-            if row['ButsMarques_1'] > row['ButsMarques_2']:
-                return 1
-            elif row['ButsMarques_1'] == row['ButsMarques_2']:
-                return 0
-            else:
-                return 2
-        elif row['Équipe'] == row['away_team']:
-            if row['ButsMarques_2'] > row['ButsMarques_1']:
-                return 1
-            elif row['ButsMarques_2'] == row['ButsMarques_1']:
-                return 0
-            else:
-                return 2
+    def compute_result(group):
+        if len(group) != 2:
+            group['resultat'] = np.nan
+            return group
+        score1 = group.iloc[0]['Buts marqués']
+        score2 = group.iloc[1]['Buts marqués']
+        if pd.isna(score1) or pd.isna(score2):
+            group['resultat'] = np.nan
+        elif score1 > score2:
+            group.iloc[0, group.columns.get_loc('resultat')] = 1
+            group.iloc[1, group.columns.get_loc('resultat')] = 2
+        elif score1 < score2:
+            group.iloc[0, group.columns.get_loc('resultat')] = 2
+            group.iloc[1, group.columns.get_loc('resultat')] = 1
         else:
-            return np.nan
-    df['resultat'] = df.apply(determine_result, axis=1)
+            group['resultat'] = 0
+        return group
+
+    df['resultat'] = np.nan
+    df = df.groupby('fixture_id', group_keys=False).apply(compute_result)
     return df
 
 def load_and_preprocess_data(csv_path):
@@ -55,15 +52,13 @@ def load_and_preprocess_data(csv_path):
     print(df.head())
     print("Colonnes disponibles :", df.columns.tolist())
     
-    # Si la colonne 'resultat' n'existe pas, on la crée.
-    if "resultat" not in df.columns:
-        print("La colonne 'resultat' n'est pas présente. Création de la colonne à partir des scores...")
-        df = create_resultat_column(df)
+    if "resultat" not in df.columns or df['resultat'].isna().all():
+        print("La colonne 'resultat' est absente ou vide. Création de la colonne à partir des scores...")
+        df = create_resultat_column_from_group(df)
         print("Premières lignes après ajout de 'resultat' :")
-        print(df[['Équipe', 'home_team', 'away_team', 'ButsMarques_1', 'ButsMarques_2', 'resultat']].head())
+        print(df[['fixture_id', 'Équipe', 'Buts marqués', 'resultat']].head())
     
-    # On garde uniquement les colonnes numériques pour l'entraînement.
-    # Les colonnes contextuelles à exclure sont : "fixture_id", "date", "Équipe", "Ligue", "home_team", "away_team"
+    # On retire les colonnes contextuelles : fixture_id, date, Équipe, Ligue, home_team, away_team
     cols_to_drop = ["fixture_id", "date", "Équipe", "Ligue", "home_team", "away_team"]
     X = df.drop(columns=cols_to_drop + ["resultat"], errors='ignore')
     y = df["resultat"]

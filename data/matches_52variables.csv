@@ -1,5 +1,4 @@
 Variable,Description
-# Variables pour l'équipe 1 (domicile)
 Classement_1,Classement de l'équipe à domicile dans le championnat
 Points_1,Nombre de points accumulés par l'équipe à domicile
 Victoires_1,Nombre de victoires de l'équipe à domicile
@@ -9,8 +8,8 @@ ButsMarques_1,Nombre de buts marqués par l'équipe à domicile
 ButsEncaissés_1,Nombre de buts encaissés par l'équipe à domicile
 DiffButs_1,Difference de buts pour l'équipe à domicile
 TirsAuBut_1,Nombre de tirs au but effectués par l'équipe à domicile
-ShotsInsideBox_1,Coups de feu à l'intérieur de la boîte (équipe à domicile)
-TirsOutsideBox_1,Tirs en dehors de la surface (équipe à domicile)
+ShotsInsideBox_1,Coups de feu à l'intérieur de la boîte (domicile)
+TirsOutsideBox_1,Tirs en dehors de la surface (domicile)
 TotalShots_1,Nombre total de coups tentés par l'équipe à domicile
 BlockedShots_1,Nombre de tirs bloqués pour l'équipe à domicile
 Fouls_1,Nombre de fautes commises par l'équipe à domicile
@@ -19,11 +18,9 @@ Offsides_1,Nombre de hors-jeu pour l'équipe à domicile
 BallPossession_1,Pourcentage de possession du ballon pour l'équipe à domicile
 YellowCards_1,Nombre de cartons jaunes reçus par l'équipe à domicile
 RedCards_1,Nombre de cartons rouges reçus par l'équipe à domicile
-GoalkeeperSaves_1,Nombre d'arrêts effectués par le gardien de l'équipe à domicile
+GoalkeeperSaves_1,Nombre d'arrêts effectués par le gardien (domicile)
 TotalPasses_1,Nombre total de passes effectuées par l'équipe à domicile
 PassAccuracy_1,Pourcentage de passes précises pour l'équipe à domicile
-
-# Variables pour l'équipe 2 (extérieur)
 Classement_2,Classement de l'équipe à l'extérieur dans le championnat
 Points_2,Nombre de points accumulés par l'équipe à l'extérieur
 Victoires_2,Nombre de victoires de l'équipe à l'extérieur
@@ -33,8 +30,8 @@ ButsMarques_2,Nombre de buts marqués par l'équipe à l'extérieur
 ButsEncaissés_2,Nombre de buts encaissés par l'équipe à l'extérieur
 DiffButs_2,Difference de buts pour l'équipe à l'extérieur
 TirsAuBut_2,Nombre de tirs au but effectués par l'équipe à l'extérieur
-ShotsInsideBox_2,Coups de feu à l'intérieur de la boîte (équipe à l'extérieur)
-TirsOutsideBox_2,Tirs en dehors de la surface (équipe à l'extérieur)
+ShotsInsideBox_2,Coups de feu à l'intérieur de la boîte (extérieur)
+TirsOutsideBox_2,Tirs en dehors de la surface (extérieur)
 TotalShots_2,Nombre total de coups tentés par l'équipe à l'extérieur
 BlockedShots_2,Nombre de tirs bloqués pour l'équipe à l'extérieur
 Fouls_2,Nombre de fautes commises par l'équipe à l'extérieur
@@ -43,6 +40,6 @@ Offsides_2,Nombre de hors-jeu pour l'équipe à l'extérieur
 BallPossession_2,Pourcentage de possession du ballon pour l'équipe à l'extérieur
 YellowCards_2,Nombre de cartons jaunes reçus par l'équipe à l'extérieur
 RedCards_2,Nombre de cartons rouges reçus par l'équipe à l'extérieur
-GoalkeeperSaves_2,Nombre d'arrêts effectués par le gardien de l'équipe à l'extérieur
+GoalkeeperSaves_2,Nombre d'arrêts effectués par le gardien (extérieur)
 TotalPasses_2,Nombre total de passes effectuées par l'équipe à l'extérieur
 PassAccuracy_2,Pourcentage de passes précises pour l'équipe à l'extérieur

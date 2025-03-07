@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import requests
 import pandas as pd
 import os
@@ -131,7 +132,6 @@ def build_dataset_for_league(league_name, league_id, season):
     fixtures_json = fetch_fixtures(league_id, season, status="FT")
     fixtures = fixtures_json.get("response", [])
     print(f"Nombre de matchs récupérés pour {league_name} : {len(fixtures)}")
-    
     data_rows = []
     for fixture in fixtures:
         fixture_id = fixture.get("fixture", {}).get("id")
@@ -172,7 +172,7 @@ def build_global_dataset(leagues_dict, season):
         return pd.DataFrame()
 
 def main():
-    season = "2024"
+    season = "2024"  # Pour la saison 2024-2025
     print(f"Construction du dataset global pour la saison {season}...")
     dataset = build_global_dataset(leagues, season)
     if dataset.empty:

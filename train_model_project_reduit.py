@@ -5,6 +5,7 @@ import os
 import time
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.preprocessing import StandardScaler
+from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
@@ -16,8 +17,7 @@ def create_resultat_column_from_group(df):
     Pour chaque match (identifié par fixture_id), compare les scores des deux lignes et crée
     la colonne 'resultat' pour chaque ligne.
     On suppose que chaque match a exactement deux lignes.
-      - Si le score de la première ligne (Buts marqués) est supérieur à celui de la deuxième, 
-        la première ligne reçoit 1 (victoire) et la deuxième 2 (défaite).
+      - Si la première ligne a un score supérieur, la première reçoit 1 (victoire) et la deuxième 2 (défaite).
       - Si les scores sont égaux, les deux lignes reçoivent 0 (match nul).
       - Sinon, l'inverse.
     """
@@ -56,26 +56,31 @@ def load_and_preprocess_data(csv_path):
     
     if "resultat" not in df.columns or df['resultat'].isna().all():
         print("La colonne 'resultat' est absente ou vide. Création de la colonne à partir des scores...")
-        # On vérifie que la colonne "Buts marqués" existe
         if "Buts marqués" not in df.columns:
             raise ValueError("La colonne 'Buts marqués' est introuvable, impossible de créer 'resultat'.")
         df = create_resultat_column_from_group(df)
         print("Premières lignes après ajout de 'resultat' :")
-        # Afficher uniquement quelques colonnes pour vérifier
         print(df[['fixture_id', 'Équipe', 'Buts marqués', 'resultat']].head())
     
-    # Suppression des colonnes contextuelles
+    # On retire les colonnes contextuelles
     cols_to_drop = ["fixture_id", "date", "Équipe", "Ligue", "home_team", "away_team"]
     X = df.drop(columns=cols_to_drop + ["resultat"], errors='ignore')
     y = df["resultat"]
     
     # Garder uniquement les colonnes numériques
     X = X.select_dtypes(include=[np.number])
+    # Supprimer les colonnes entièrement vides (qui contiennent uniquement des NaN)
+    X = X.dropna(axis=1, how="all")
     
-    print("Dimensions de X après sélection numérique :", X.shape)
+    print("Dimensions de X après sélection numérique et suppression des colonnes vides :", X.shape)
     
+    # Imputation : remplacer les NaN restants par la moyenne
+    imputer = SimpleImputer(strategy='mean')
+    X_imputed = imputer.fit_transform(X)
+    
+    # Normalisation
     scaler = StandardScaler()
-    X_scaled = scaler.fit_transform(X)
+    X_scaled = scaler.fit_transform(X_imputed)
     
     return X_scaled, y, scaler
 

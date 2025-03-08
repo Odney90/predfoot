@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
+import os
+st.write("Répertoire de travail actuel :", os.getcwd())
+
 
 # Charger la liste des équipes depuis le CSV
 @st.cache_data

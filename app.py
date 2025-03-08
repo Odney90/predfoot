@@ -22,7 +22,7 @@ def load_model_and_scaler():
             scaler = pickle.load(f)
         return model, scaler
     except Exception as e:
-        st.error(f"Erreur lors du chargement du modèle ou du scaler: {e}")
+        st.error(f"Erreur lors du chargement du modèle ou du scaler : {e}")
         return None, None
 
 def predict_result(features, model, scaler):
@@ -39,6 +39,7 @@ if teams_df.empty:
     st.error("Aucune donnée d'équipes disponible.")
     st.stop()
 
+# Extraction des noms d'équipes
 team_names = sorted(teams_df["team_name"].unique())
 col1, col2 = st.columns(2)
 with col1:
@@ -83,10 +84,9 @@ else:
             st.write(f"Le modèle attend {n_features} features.")
             
             # Création d'un vecteur de caractéristiques de taille n_features
-            # Nous remplissons par défaut toutes les positions avec 0
+            # Nous plaçons les 3 valeurs saisies pour l'équipe 1 dans les 3 premières positions,
+            # et celles pour l'équipe 2 dans les 3 positions à la moitié du vecteur.
             feature_vector = np.zeros(n_features)
-            # Pour simplifier, nous allons placer nos 3 entrées pour l'équipe 1 dans les 3 premières positions,
-            # et nos 3 entrées pour l'équipe 2 dans les 3 positions commençant à la moitié du vecteur.
             half = n_features // 2
             feature_vector[0] = classement1
             feature_vector[1] = points1
@@ -98,10 +98,9 @@ else:
             # Redimensionner le vecteur pour obtenir la forme (1, n_features)
             feature_vector = feature_vector.reshape(1, -1)
             
-            # Effectuer la prédiction
             prediction = predict_result(feature_vector, model, scaler)
             
-            # Interpréter la prédiction (1 -> victoire, 0 -> nul, 2 -> défaite pour l'équipe 1)
+            # Interprétation de la prédiction
             if prediction == 1:
                 result_text = f"{equipe1} devrait gagner."
             elif prediction == 0:

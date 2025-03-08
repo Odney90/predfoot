@@ -40,7 +40,8 @@ def create_resultat_column_from_group(df):
         return group
 
     df['resultat'] = np.nan
-    df = df.groupby('fixture_id', group_keys=False).apply(compute_result)
+    # Utilisation de include_groups=False pour exclure les colonnes de regroupement de l'opération
+    df = df.groupby('fixture_id', group_keys=False, include_groups=False).apply(compute_result)
     return df
 
 def load_and_preprocess_data(csv_path):
@@ -62,14 +63,14 @@ def load_and_preprocess_data(csv_path):
         print("Premières lignes après ajout de 'resultat' :")
         print(df[['fixture_id', 'Équipe', 'Buts marqués', 'resultat']].head())
     
-    # On retire les colonnes contextuelles
+    # Suppression des colonnes contextuelles
     cols_to_drop = ["fixture_id", "date", "Équipe", "Ligue", "home_team", "away_team"]
     X = df.drop(columns=cols_to_drop + ["resultat"], errors='ignore')
     y = df["resultat"]
     
     # Garder uniquement les colonnes numériques
     X = X.select_dtypes(include=[np.number])
-    # Supprimer les colonnes entièrement vides (qui contiennent uniquement des NaN)
+    # Supprimer les colonnes entièrement vides
     X = X.dropna(axis=1, how="all")
     
     print("Dimensions de X après sélection numérique et suppression des colonnes vides :", X.shape)

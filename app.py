@@ -4,8 +4,7 @@ import numpy as np
 import pickle
 import os
 st.write("Répertoire de travail actuel :", os.getcwd())
-
-
+os.chdir("/content/predfoot")
 # Charger la liste des équipes depuis le CSV
 @st.cache_data
 def load_teams():

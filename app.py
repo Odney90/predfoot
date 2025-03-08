@@ -5,7 +5,6 @@ import pickle
 import os
 
 # Forcer le répertoire de travail vers le dossier du dépôt
-os.chdir("/content/predfoot")
 st.write("Répertoire de travail actuel :", os.getcwd())
 
 # Charger la liste des équipes depuis le fichier CSV
